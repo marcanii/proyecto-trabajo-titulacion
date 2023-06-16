@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:monitoring_of_degree_work/Login/Widgets/text_field_custom.dart';
 import 'package:monitoring_of_degree_work/Login/signup_page.dart';
 import 'package:monitoring_of_degree_work/Widgets/widgets.dart';
+import 'package:monitoring_of_degree_work/home.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -58,25 +59,21 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 55,
-              left: 20,
-              child: Container(
-                  height: 90,
-                  width: 70,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.white,
-                  ),
+              top: 30,
+              left: 8,
+              child: SizedBox(
+                  height: 120,
+                  width: 100,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Image.asset(
-                      'Assets/usfx-logo.png',
+                      'Assets/logo-usfx.png',
                     ),
                   )),
             ),
             const Positioned(
                 top: 75,
-                left: 100,
+                left: 110,
                 child: TextFrave(
                     text: 'Bienvenido de nuevo',
                     fontSize: 25,
@@ -108,7 +105,11 @@ class _BottonSignIn extends StatelessWidget {
         child: TextButton(
           child: const TextFrave(
               text: 'Iniciar Sesión', color: Colors.white, fontSize: 22),
-          onPressed: () {},
+          onPressed: () {
+            // Navegar a la nueva ventana al hacer clic
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (_) => const Homepage()));
+          },
         ),
       ),
     );

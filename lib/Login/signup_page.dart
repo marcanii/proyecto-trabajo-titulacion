@@ -58,25 +58,21 @@ class SignUpPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 55,
-              left: 20,
-              child: Container(
-                  height: 100,
-                  width: 70,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.white,
-                  ),
+              top: 30,
+              left: 8,
+              child: SizedBox(
+                  height: 120,
+                  width: 100,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Image.asset(
-                      'Assets/usfx_logo.png',
+                      'Assets/logo-usfx.png',
                     ),
                   )),
             ),
             const Positioned(
                 top: 75,
-                left: 100,
+                left: 110,
                 child: TextFrave(
                     text: 'Bienvenido de nuevo',
                     fontSize: 25,
